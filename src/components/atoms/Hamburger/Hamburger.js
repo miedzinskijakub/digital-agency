@@ -6,7 +6,6 @@ const StyledHamburger = styled.button`
     border: none;
     background: none;
     z-index: 9999;
-    
     ${({theme}) => theme.mq.huge}{
         padding: 20px;
 
@@ -18,6 +17,7 @@ const StyledHamburger = styled.button`
     width: 24px;
     height: 2px;
     background-color: ${({ isOpen}) => isOpen ? 'transparent' : 'black'};
+
     transition: background-color .1s .2s ease-in-out;
 
 

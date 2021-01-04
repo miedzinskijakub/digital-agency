@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoImg from '/Users/Miedziak/Desktop/Nowy-pub-new/my-app/src/assets/image/BaroQ.svg';
 
 
 const StyledWrapper = styled.div`
@@ -27,7 +26,6 @@ const Footer = () =>(
   
     <StyledWrapper>
         <p>COCTAIL BAR</p>
-        <img alt='hej' src={logoImg}></img>
         <Information>VISIT US
         Lorem ipsum dolor
         Tel: 123-456-7890

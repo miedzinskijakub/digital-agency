@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-import Logo from '../Logo/Logo'
-import Hamburger from '../Hamburger/Hamburger'
-import { FaInstagram, FaFacebookF } from 'react-icons/fa';
-import MobileMenu from "../MobileMenu/MobileMenu"
+import Hamburger from '../../atoms/Hamburger/Hamburger'
+import MobileMenu from '../../molecules/MobileMenu/MobileMenu'
 
-
-const StyledWrapper = styled.div`
-    position: fixed;
+const StyledWrapper = styled.header`
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 13px 4px;
+    right: 0;
+    padding: 0.5px 35px;
     display: flex;
-    width: 100%;
+    width: 100vw;
+    height: 70px;
     justify-content: space-between;
-    align-items: flex-start;
-    background-color: white;
+    align-items: center;
+    background-color: transparent;
     z-index: 9999;  
     ${({theme}) => theme.mq.tablet}{
         align-items: center;
@@ -37,20 +36,12 @@ ${({theme}) => theme.mq.huge}{
 }
     `;
 
-const StyledLogo = styled(Logo)`
-position: relative;
-z-index: 9999;
-${({theme}) => theme.mq.tablet}{
-   width: 120px;
-}
-${({theme}) => theme.mq.desktop}{
-    width: 130px;
-}
-${({theme}) => theme.mq.huge}{
-    width: 200px;
-}
+const StyledLogo = styled.span`
+text-transform: lowercase;
+font-family: Inter, sans-serif;
+font-size: 1rem;
+font-weight: 700;
 `
-
 
 
 const Header = () =>{
@@ -65,9 +56,7 @@ const toggleMobileMenu = () => {
 
     return(
 <StyledWrapper>
-    <StyledLogo/>
-    <FaFacebookF className="fb-media"/>
-    <FaInstagram className="insta-media"/>
+    <a><StyledLogo>Digital Agency</StyledLogo></a>
     <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen}/>
     <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen}/>
 </StyledWrapper>

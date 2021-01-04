@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-
+        -webkit-font-smoothing: antialiased;
     }
 html{
     font-size: 62.5%;
@@ -24,30 +24,10 @@ body{
     margin:0 auto;
     overflow: hidden;
 }
-
-.fb-media{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    z-index: 9999;
-
-}
-
-.insta-media{
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    z-index: 9999;
-
-
-}
-a{
-    text-decoration: none;
+a {
     color: black;
+    text-decoration: none;
+
 }
 
 
