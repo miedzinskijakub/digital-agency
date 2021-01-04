@@ -22,7 +22,8 @@ body{
 #root {
     position: relative;
     margin:0 auto;
-    overflow: hidden;
+    overflow-X: hidden;
+
 }
 a {
     color: black;

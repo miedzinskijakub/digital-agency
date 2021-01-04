@@ -3,39 +3,88 @@ import styled from 'styled-components';
 
 
 const StyledWrapper = styled.div`
-    position:relative;
-    background-color: #E8E8E8;
-    padding: 50px;
-    text-align: center;
-    
-    ${({theme}) => theme.mq.tablet}{
-        padding: 70px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+background-color: rgb(23, 23, 23);
+place-content: center;
+place-items: center;
+padding: 8px;
 
-    }
-`
-const Information = styled.p`
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    ${({theme}) => theme.mq.tablet}{
-    font-size: 2rem;
-    }
 `
 
+const StyledLink = styled.a`
+    display: none;
+`
+
+const StyledSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 200px;
+`
+const StyledHeading4 = styled.h4`
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+    font-size: cacl(1.6rem + 0.25vmax);
+`
+const StyledUL = styled.ul`
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+`
+const StyledLI = styled.li`
+    align-self: flex-start;
+    margin-bbottom: 4px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: calc(1rem + 0.25vmax);
+`
+const SecondStyledArticle = styled.article`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 80px;
+    padding: 20px;
+    gap: 20px;
+    place-content: start;
+    place-items: center;
+    color: rgb(240, 240, 240);
+    justify-items: start;
+
+`
 const Footer = () =>(
 
   
     <StyledWrapper>
-        <p>COCTAIL BAR</p>
-        <Information>VISIT US
-        Lorem ipsum dolor
-        Tel: 123-456-7890
-        Open from 6pm to 2am
-        WORK WITH US
-        join our team at the bar
-        Contact us at info@mysite.com
-        </Information>   
-        <span>The site is a fiction for a portfolio.
-        The website was made by Jakub Miedziński.</span>
+        <StyledLink>Digital Agency</StyledLink>
+        <SecondStyledArticle>
+                <StyledSection>
+                    <StyledHeading4>Development</StyledHeading4>
+                    <StyledUL>
+                        <StyledLI>Mobile development</StyledLI>
+                        <StyledLI>Web development</StyledLI>
+                    </StyledUL>
+                </StyledSection>
+                <StyledSection>  
+                    <StyledHeading4>Business</StyledHeading4>
+                    <StyledUL>
+                        <StyledLI>Marketing</StyledLI>
+                        <StyledLI>SEO</StyledLI>
+                    </StyledUL>
+                </StyledSection>
+                <StyledSection>                    
+                    <StyledHeading4>Design</StyledHeading4>
+                    <StyledUL>
+                        <StyledLI>UX Design</StyledLI>
+                        <StyledLI>Branding</StyledLI>
+                    </StyledUL>
+                </StyledSection>
+
+            </SecondStyledArticle>
     </StyledWrapper>
     
     );

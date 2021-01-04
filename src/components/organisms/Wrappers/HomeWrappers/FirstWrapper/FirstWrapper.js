@@ -1,28 +1,68 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../../../atoms/Button/Button'
+import Wall from '../../../../../assets/image/wall-large.jpg'
 
 const StyledWrapper = styled.section`
-    margin-top: 70px;
     width: 100vw;
     height: 100vh;
     
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     display: grid;
-    @media (max-width: 500px) {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    }
-    @media (max-width: 700px), (orientation: landscape) {
-        min-height: 500px;
-    }
+
 `;
 
+const StyledArticle = styled.article`
+    padding: 20px;
+    margin-top: 70px;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+
+`
+const StyledHeader = styled.h1`
+    max-width: 80vw;
+    font-size: calc(2.1rem + 0.25vmax);
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    z-index: 9999;
+    margin-bottom: 8px;
+    line-height: 100%;
+`
+const StyledParagraph = styled.p`
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    max-width: 80vw;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+`
+const StyledButtonContainer = styled.div`
+    display: flex;
+    margin: 8px 8px 8px 8px;
+`
+const StyledBackground = styled.div`
+    background-size: 103.51%;
+    background-image: url(${Wall});
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-size 0s ease 0s;
+    max-width: 100vw;
+`
 
 const FirstWrapper = () => (
    
         <StyledWrapper>
-           hej
-           <Button/>
+           <StyledArticle>
+               <div><StyledHeader>Take your business to the next level</StyledHeader></div>
+               <div><StyledParagraph>Sint nostrud ipsum ut consectetur magna cillum qui. Commodo cillum in aute magna aliquip in aliquip excepteur.</StyledParagraph></div>
+                <StyledButtonContainer><Button></Button><Button></Button></StyledButtonContainer>
+
+           </StyledArticle>
+           <StyledBackground/>
         </StyledWrapper>
    
    );

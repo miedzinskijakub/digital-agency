@@ -13,6 +13,7 @@ const StyledButton = styled.button`
     cursor: pointer;
     text-transform: lowercase;
     outline: none;
+    margin: 10px 15px;
     ::after{
         content: "";
         position: absolute;
@@ -20,14 +21,21 @@ const StyledButton = styled.button`
         height: 100%;
         background-color: black;
         transform: translate(-10px, 10px);
+        transition: transform .3s ease-out 0s;
+
         z-index: -1;
+    }
+    &:hover{
+        &:after{
+            transform: translate(-7px, 7px);
+    }
     }
 `
 
 const Button = () =>(
     <>
   <StyledButton>
-      siema
+      hej
   </StyledButton>
     </>
 )
