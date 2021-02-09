@@ -24,6 +24,7 @@ const StyledWrapper = styled.div`
     background-color: white;
     transform: translate(${({isOpen}) => isOpen ? '0' : '100%'});
     transition: transform .25s ease-in-out;
+
 `;
 
 const MenuLink = styled.p`
@@ -34,6 +35,7 @@ const MenuLink = styled.p`
     margin-top: 40px;
     opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
     transition: opacity .25s .20s ease-in-out;
+
     ${({theme}) => theme.mq.desktop}{
         font-size: 4rem;
 }
@@ -46,12 +48,10 @@ ${({theme}) => theme.mq.tablet}{
 
 
 const menuItems = [
-    <HashLink>Home</HashLink>,
-
-    <Link to="/" 
-    offset={-50}
-    duration={1000}
-    onClick={scrollToBottom} >Contact</Link>,
+    <HashLink to="/#top">Home</HashLink>,
+    <HashLink to="/projects">About</HashLink>,
+    
+    <Link to="/projects">Contacts</Link>,
 ];
 
 
@@ -59,8 +59,8 @@ const MobileMenu = ({isOpen, toogle}) => (
     
    
     <StyledWrapper isOpen={isOpen}>
-        {menuItems.map( item => (
-        <MenuLink key={item.id} isOpen={isOpen}
+        {menuItems.map( (item, index) => (
+        <MenuLink key={index} isOpen={isOpen}
           onClick={toogle}>{item}</MenuLink>
         ))}
     </StyledWrapper>

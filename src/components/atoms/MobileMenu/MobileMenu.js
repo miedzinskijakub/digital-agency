@@ -48,13 +48,10 @@ ${({theme}) => theme.mq.tablet}{
 
 
 const menuItems = [
-    <HashLink smooth to="/#top">Home</HashLink>,
-    <HashLink smooth to="/menu#top">Menu</HashLink>,
-
-    <Link to="/" 
-    offset={-50}
-    duration={1000}
-    onClick={scrollToBottom} >Contact</Link>,
+    <HashLink to="/#top">Home</HashLink>,
+    <HashLink to="/projects">cipa</HashLink>,
+    
+    <Link to="/projects">Contacts</Link>,
 ];
 
 
@@ -62,8 +59,8 @@ const MobileMenu = ({isOpen, toogle}) => (
     
    
     <StyledWrapper isOpen={isOpen}>
-        {menuItems.map( item => (
-        <MenuLink key={item.id} isOpen={isOpen}
+        {menuItems.map( item, index => (
+        <MenuLink key={index} isOpen={isOpen}
           onClick={toogle}>{item}</MenuLink>
         ))}
     </StyledWrapper>
