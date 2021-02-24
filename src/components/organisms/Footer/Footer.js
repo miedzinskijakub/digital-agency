@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 
 
-const StyledWrapper = styled.div`
+
+
+const StyledWrapper = styled.footer`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 background-color: rgb(23, 23, 23);
@@ -10,13 +13,20 @@ place-content: center;
 place-items: center;
 padding: 8px;
 
+${({ theme }) => theme.mq.tablet}{
 
+ 
+  
+
+}
 `
 
 const StyledLink = styled.a`
     display: none;
 
     ${({ theme }) => theme.mq.tablet}{
+
+        
         display: inherit;
 
         text-decoration: none;
@@ -85,10 +95,18 @@ const SecondStyledArticle = styled.article`
     }
 
 `
-const Footer = () =>(
+const Footer = () =>{
+
+    
+const {pathname} = useLocation();
+if(pathname === '/services'){
+  
 
   
-    <StyledWrapper>
+}
+
+  return(
+    <StyledWrapper className = "pizda">
         <StyledLink>Digital Agency</StyledLink>
         <SecondStyledArticle>
                 <StyledSection>
@@ -116,6 +134,7 @@ const Footer = () =>(
             </SecondStyledArticle>
     </StyledWrapper>
     
-    );
+    )
+  };
     
     export default Footer;

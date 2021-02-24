@@ -12,6 +12,12 @@ width: 100vw;
     display: grid;
     padding: 1rem;
     grid-template-columns: 4fr 5fr;
+    ${({ theme }) => theme.mq.tablet}{
+   
+      border: 40px solid rgb(23, 23, 23);
+
+
+  }
 `
 const StyledForm = styled.div`
 grid-column: 1 / 3;
@@ -20,11 +26,11 @@ display: flex;
     align-items: center;
     padding: 1rem;
     justify-content: center;
+
 `
 const StyledHeading = styled.h1`
 font-size: 3rem;
 letter-spacing: 4px;
-text-transform: lowercase;
 max-width: 80vw;
 font-family: Roboto, sans-serif;
 transition: all 0.2s linear 0s;
@@ -32,11 +38,25 @@ transition: all 0.2s linear 0s;
     z-index: 9999;
     margin-bottom: 8px;
     line-height: 100%;
+
+    ${({ theme }) => theme.mq.tablet}{
+   
+      letter-spacing: 0;
+      font-size: 4rem;
+
+    }
+
 `
 const StyledInputsForm = styled.form`
 padding: 1rem;
 display: flex;
 flex-direction: column;
+
+${({ theme }) => theme.mq.tablet}{
+   
+  min-width: 400px;
+
+}
 `
 const StyledInput = styled.input`
 height: 32px;
@@ -51,6 +71,12 @@ font-family: Roboto, sans-serif;
     display: block;
     position: relative;
     appearance: none;
+
+    ${({ theme }) => theme.mq.tablet}{
+   
+      height: 40px;
+    
+    }
 `
 const StyledTextArea = styled.textarea`
 height: 80px;
@@ -66,6 +92,12 @@ font-family: Roboto, sans-serif;
     position: relative;
     resize: none;
     appearance: none;
+
+    ${({ theme }) => theme.mq.tablet}{
+   
+      height: 96px;
+    
+    }
 `
 const Terms = styled.div`
 display: flex;
@@ -73,6 +105,7 @@ align-items: center;
 justify-content: flex-start;
 width: 100%;
 margin-bottom: 15px;
+
 `
 const StyledTermsP = styled.p`
 font-size: 1rem;

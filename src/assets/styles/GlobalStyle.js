@@ -9,13 +9,13 @@ const GlobalStyle = createGlobalStyle`
     }
 html{
     font-size: 62.5%;
-
 }
 
 body{
     margin: 0;
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
 }
 
 
@@ -23,6 +23,8 @@ body{
     position: relative;
     margin:0 auto;
     overflow-X: hidden;
+    min-height: 100vh;
+
 
 }
 a {
