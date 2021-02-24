@@ -31,6 +31,12 @@ const StyledHeader = styled.h1`
     z-index: 9999;
     margin-bottom: 8px;
     line-height: 100%;
+
+    ${({ theme }) => theme.mq.tablet}{
+        font-size: calc(3rem + 0.25vmax);
+        max-width: 70vw;
+    
+    }
 `
 const StyledParagraph = styled.p`
     margin-bottom: 20px;
@@ -38,6 +44,13 @@ const StyledParagraph = styled.p`
     max-width: 80vw;
     font-family: Inter, sans-serif;
     font-weight: 400;
+
+    ${({ theme }) => theme.mq.tablet}{
+    
+        width: 50vw;
+        font-size: calc(1.2rem + 0.25vmax);
+    
+    }
 `
 const StyledButtonContainer = styled.div`
     display: flex;

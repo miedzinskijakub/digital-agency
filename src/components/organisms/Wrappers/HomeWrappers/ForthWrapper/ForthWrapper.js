@@ -10,6 +10,13 @@ justify-content: space-evenly;
 align-items: center;
 flex-wrap: wrap;
 margin-bottom: 20px;
+
+${({ theme }) => theme.mq.tablet}{
+    padding: 30px 0px;
+    min-height: inherit;
+
+
+}
 `;
 
 const StyledQuote = styled.q`
@@ -19,6 +26,12 @@ font-family: "Playfair Display", serif;
 font-style: italic;
 max-width: 400px;
 
+
+${({ theme }) => theme.mq.tablet}{
+    font-size: 2.1rem;
+
+
+}
 
 ::after, ::before{
     content: open-quote;
@@ -34,6 +47,12 @@ const StyledHeading = styled.h1`
     z-index: 9999;
     margin-bottom: 8px;
     position: relative;
+
+    ${({ theme }) => theme.mq.tablet}{
+        font-size: calc(3rem + 0.25vmax);
+        max-width: 350px;
+    
+    }
 
     ::before{
         content: "";

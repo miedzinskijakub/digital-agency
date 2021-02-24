@@ -10,10 +10,22 @@ place-content: center;
 place-items: center;
 padding: 8px;
 
+
 `
 
 const StyledLink = styled.a`
     display: none;
+
+    ${({ theme }) => theme.mq.tablet}{
+        display: inherit;
+
+        text-decoration: none;
+        color: rgb(245, 245, 245);
+        font-size: 3rem;
+        text-transform: lowercase;
+        font-weight: 700;
+
+    }
 `
 
 const StyledSection = styled.section`
@@ -42,6 +54,14 @@ const StyledLI = styled.li`
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: calc(1rem + 0.25vmax);
+
+    ${({ theme }) => theme.mq.tablet}{
+     
+        align-self: inherit;
+
+
+    }
+
 `
 const SecondStyledArticle = styled.article`
     width: 100%;
@@ -54,6 +74,15 @@ const SecondStyledArticle = styled.article`
     place-items: center;
     color: rgb(240, 240, 240);
     justify-items: start;
+
+    
+    ${({ theme }) => theme.mq.tablet}{
+     
+        place-content: center;
+        justify-items: center;
+
+
+    }
 
 `
 const Footer = () =>(

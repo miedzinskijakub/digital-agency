@@ -11,6 +11,11 @@ const StyledWrapper = styled.section`
     max-height: 1000px;
     background-color: rgb(245, 245, 245);
     gap: 10px;
+    ${({ theme }) => theme.mq.tablet}{
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+    
+    }
 `;
 
 const FirstStyledArticle = styled.article`
@@ -23,6 +28,11 @@ const FirstStyledArticle = styled.article`
     justify-content: center;
     padding: 24px;
 
+    
+    ${({ theme }) => theme.mq.tablet}{
+      
+    
+    }
 `
 const SecondStyledArticle = styled.article`
     grid-auto-rows: 80px;
@@ -34,6 +44,19 @@ const SecondStyledArticle = styled.article`
     color: rgb(23, 23, 23);
     place-content: start;
     justify-items: start;
+
+    ${({ theme }) => theme.mq.tablet}{
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      grid-auto-rows: 80px;
+      justify-items: inherit;
+      place-content: center;
+      place-items: center;
+
+
+
+    }
 `
 const StyledHeader = styled.h1`
     max-width: 80vw;
@@ -44,6 +67,11 @@ const StyledHeader = styled.h1`
     z-index: 9999;
     margin-bottom: 8px;
     line-height: 100%;
+
+    ${({ theme }) => theme.mq.tablet}{
+        font-size: calc(3rem + 0.25vmax);
+    
+    }
 `
 const StyledParagraph = styled.p`
     font-size: 1.2rem;
@@ -52,12 +80,20 @@ const StyledParagraph = styled.p`
     font-weight: 300;
     margin-bottom: 8px;
 
+    ${({ theme }) => theme.mq.tablet}{
+        max-width: 70vw;
+        font-size: calc(1.2rem + 0.25vmax);
+    
+    }
+
 `
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     margin: 0px;
     width: 200px;
+
+ 
 `
 const StyledHeading4 = styled.h4`
     font-family: Roboto, sans-serif;
@@ -75,10 +111,15 @@ const StyledUL = styled.ul`
 `
 const StyledLI = styled.li`
     align-self: flex-start;
-    margin-bbottom: 4px;
+    margin-bottom: 4px;
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: calc(1rem + 0.25vmax);
+    ${({ theme }) => theme.mq.tablet}{
+        align-self: inherit;
+
+  
+    }
 `
 
 const SecondWrapper = () => (   
