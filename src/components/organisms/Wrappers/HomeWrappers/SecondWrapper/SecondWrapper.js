@@ -16,6 +16,7 @@ const StyledWrapper = styled.section`
 
     
     }
+  
 `;
 
 const FirstStyledArticle = styled.article`
@@ -48,14 +49,18 @@ const SecondStyledArticle = styled.article`
     ${({ theme }) => theme.mq.tablet}{
       width: 100%;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
       grid-auto-rows: 80px;
       justify-items: inherit;
       place-content: center;
       place-items: center;
 
 
+    }
 
+    ${({ theme }) => theme.mq.desktop}{
+        grid-auto-rows: 150px;
+
+    
     }
 `
 const StyledHeader = styled.h1`

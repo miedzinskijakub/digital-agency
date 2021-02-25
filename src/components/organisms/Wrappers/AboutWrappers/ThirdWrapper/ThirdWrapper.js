@@ -34,6 +34,11 @@ height: auto;
         margin: 32px 16px 64px;
 
     }
+    ${({ theme }) => theme.mq.desktop}{
+  
+       background-color: rgb(248, 247, 251);
+       
+     }
 `
 const StyledSingle = styled.div`
 margin-top: 24px;
@@ -51,6 +56,11 @@ display: grid;
         margin-left: 40px;
 
     }
+    ${({ theme }) => theme.mq.desktop}{
+  
+        background-color: rgb(248, 247, 251);
+        
+      }
 `
 
 const StyledPlus = styled.div`

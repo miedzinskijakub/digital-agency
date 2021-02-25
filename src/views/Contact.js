@@ -18,6 +18,13 @@ width: 100vw;
 
 
   }
+  ${({ theme }) => theme.mq.tablet}{
+   
+    height: calc(100vh - 70px);
+
+
+
+}
 `
 const StyledForm = styled.div`
 grid-column: 1 / 3;

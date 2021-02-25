@@ -17,6 +17,11 @@ ${({ theme }) => theme.mq.tablet}{
 
 
 }
+
+${({ theme }) => theme.mq.desktop}{
+    min-height: 250px;
+    
+}
 `;
 
 const StyledQuote = styled.q`

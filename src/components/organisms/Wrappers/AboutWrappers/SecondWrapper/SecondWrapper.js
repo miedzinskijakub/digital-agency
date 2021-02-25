@@ -89,8 +89,68 @@ outline: none;
 border: none;
 font-weight: 700;
 cursor: pointer;
+
 `
 
+const StyledQuote = styled.section`
+display: none;
+${({ theme }) => theme.mq.desktop}{
+  
+    grid-area: 2 / 1 / auto / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+`
+const StyledQuoteTag = styled.q`
+${({ theme }) => theme.mq.desktop}{
+  
+   font-size: 1.2rem;
+   letter-spacing: 3px;
+   font-family: "Playfair Display", sans-serif;
+   font-style: italic;
+
+   ::before{
+       content: open-quote;
+   }
+   ::after{
+       content: close-quote;
+   }
+  
+}
+`
+const StyledAuthor = styled.h1`
+
+${({ theme }) => theme.mq.desktop}{
+  
+    font-family: Roboto, sans-serif;
+    font-size: calc(3rem + 0.25vmax);
+    text-transform: uppercase;
+    transition: all 0.2s linear 0s;
+    color: black;
+    max-width: 350px;
+    z-index: 9999;
+    margin-bottom: 8px;
+    position: relative;
+ 
+    ::before{
+        content: "";
+    position: absolute;
+    width: 75%;
+    height: 12px;
+    background-color: rgb(246, 216, 174);
+    top: 60%;
+    z-index: -1;
+    left: 5%;
+    }
+
+   
+ }
+
+
+`
 
 const SecondWrapper = () => (
 
@@ -106,6 +166,12 @@ const SecondWrapper = () => (
 <StyledButton>projects</StyledButton>
 </StyledSection>
 </StyledBox>
+
+<StyledQuote>
+    <StyledQuoteTag>Those who dare to fail miserably can achieve greatly</StyledQuoteTag>
+    <StyledAuthor>JOHN F. KENNEDY</StyledAuthor>
+</StyledQuote>
+
 </StyledSecondSection>
 
 
