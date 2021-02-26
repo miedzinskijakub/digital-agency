@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {ReactComponent as Reading} from '../assets/image/reading.svg'
+
 
 const StyledContainer = styled.div`
 border: none;
@@ -33,6 +35,14 @@ display: flex;
     align-items: center;
     padding: 1rem;
     justify-content: center;
+
+    ${({ theme }) => theme.mq.huge}{
+   
+      grid-column: inherit;
+
+  
+  
+  }
 
 `
 const StyledHeading = styled.h1`
@@ -150,6 +160,23 @@ position: relative;
 }
 `
 
+const StyledReading = styled(Reading)`
+display: none;
+${({ theme }) => theme.mq.huge}{
+   display: block;
+  position: absolute;
+  bottom: -30%;
+  width: 50vw;
+
+}
+
+`
+const StyledSvgCont = styled.div`
+
+  position: relative;
+
+`
+
 const Contact = () =>(
   <StyledContainer>
     <StyledForm>
@@ -165,6 +192,11 @@ const Contact = () =>(
         <StyledButton>send</StyledButton>
         </StyledInputsForm>
     </StyledForm>
+
+    <StyledSvgCont>
+      <StyledReading/>
+    </StyledSvgCont>
+
   </StyledContainer>
 )
 

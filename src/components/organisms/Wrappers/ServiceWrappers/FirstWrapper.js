@@ -10,11 +10,7 @@ align-items: center;
 justify-content: center;
 
 
-${({ theme }) => theme.mq.tablet}{
 
-
-
-}
 `
 
 const StyledHeader = styled.div`
@@ -93,6 +89,19 @@ max-width: 80vw;
     margin-bottom: 8px;
     position: relative;
 
+    ${({ theme }) => theme.mq.tablet}{
+
+      font-size: calc(3rem + 0.25vmax);
+      max-width: 350px; 
+      
+      }
+
+    ${({ theme }) => theme.mq.desktop}{
+     font-size: calc(3rem + 0.25vmax);
+     max-width: 350px; 
+      
+    }
+
     ::before{
     content: "";
     position: absolute;
@@ -102,6 +111,7 @@ max-width: 80vw;
     top: 60%;
     z-index: -1;
     left: 5%;
+  
     }
 `
 
@@ -119,6 +129,18 @@ align-items: center;
 justify-content: center;
 font-weight: 700;
 margin: 0px 8px 8px 0px;
+
+${({ theme }) => theme.mq.tablet}{
+
+  font-size: 1.4rem;
+  
+  }
+
+${({ theme }) => theme.mq.desktop}{
+
+font-size: 1.2rem;
+
+}
 `
 
 const Description = styled.div`
@@ -153,7 +175,7 @@ const Services = () =>(
     
     <StyledChange>
 
-      <Heading>Desing</Heading>
+      <Heading>Design</Heading>
       <Tiles>
         <StyledTiles>UI Design</StyledTiles>
         <StyledTiles>UX Design</StyledTiles>

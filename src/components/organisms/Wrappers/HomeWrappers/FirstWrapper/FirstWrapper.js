@@ -6,7 +6,6 @@ import Wall from '../../../../../assets/image/wall-large.jpg'
 const StyledWrapper = styled.section`
     width: 100vw;
     height: 100vh;
-    
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     display: grid;
 
@@ -20,6 +19,13 @@ const StyledArticle = styled.article`
     flex-direction: column;
     position: relative;
     justify-content: center;
+    ${({ theme }) => theme.mq.huge}{
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 12vw;
+        padding-right: 40px;
+    
+    }
 
 `
 const StyledHeader = styled.h1`
@@ -48,6 +54,13 @@ const StyledParagraph = styled.p`
     ${({ theme }) => theme.mq.tablet}{
     
         width: 50vw;
+        font-size: calc(1.2rem + 0.25vmax);
+    
+    }
+
+    ${({ theme }) => theme.mq.huge}{
+        width: 100%;
+        font-weight: 300;
         font-size: calc(1.2rem + 0.25vmax);
     
     }

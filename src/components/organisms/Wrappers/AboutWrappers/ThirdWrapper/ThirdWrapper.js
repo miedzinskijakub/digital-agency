@@ -56,11 +56,7 @@ display: grid;
         margin-left: 40px;
 
     }
-    ${({ theme }) => theme.mq.desktop}{
-  
-        background-color: rgb(248, 247, 251);
-        
-      }
+   
 `
 
 const StyledPlus = styled.div`
