@@ -9,7 +9,10 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
+${({ theme }) => theme.mq.full}{
+  min-height: 70vh;
 
+}
 
 `
 
@@ -64,6 +67,10 @@ const StyledSection = styled.div`
 
         max-height: 400px;
 
+    }
+    ${({ theme }) => theme.mq.full}{
+      max-height: 400px;
+    
     }
 `
 

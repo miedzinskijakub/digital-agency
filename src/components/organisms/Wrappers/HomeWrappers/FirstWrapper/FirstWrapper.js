@@ -43,6 +43,10 @@ const StyledHeader = styled.h1`
         max-width: 70vw;
     
     }
+    ${({ theme }) => theme.mq.full}{
+        max-width: 400px;
+    
+    }
 `
 const StyledParagraph = styled.p`
     margin-bottom: 20px;
