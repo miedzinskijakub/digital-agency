@@ -17,7 +17,7 @@ const StyledHamburger = styled.button`
     width: 24px;
     height: 2px;
     background-color: ${({ isOpen}) => isOpen ? 'transparent' : 'black'};
-
+    
     transition: background-color .1s .2s ease-in-out;
 
 
@@ -42,22 +42,22 @@ const StyledHamburger = styled.button`
         transform: translateY(${({isOpen}) => isOpen ? '-6px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
     }
     ${({theme}) => theme.mq.tablet}{
-        width: 35px;
-        height: 3px;
+        width: 20px;
+        height: 2px;
+        
         ::after, ::before{
-            width: 35px;
-            height: 3px;
+            width: 20px;
+            height: 2px;
 
     }
-    height: 4px;
     ::before{
-        top: -10px;
-        transform: translateY(${({isOpen}) => isOpen ? '10px' : '0'}) rotate(${({isOpen}) => isOpen ? '45deg' : '0'});
+        top: -6px;
+        transform: translateY(${({isOpen}) => isOpen ? '6px' : '0'}) rotate(${({isOpen}) => isOpen ? '45deg' : '0'});
 
     }
     ::after{
-        top: 10px;
-        transform: translateY(${({isOpen}) => isOpen ? '-10px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
+        top: 6px;
+        transform: translateY(${({isOpen}) => isOpen ? '-6px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
 
     }
     ${({theme}) => theme.mq.huge}{

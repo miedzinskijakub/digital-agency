@@ -42,7 +42,11 @@ font-family: Inter, sans-serif;
 font-size: 1rem;
 font-weight: 700;
 `
-
+const StyledNav = styled.nav`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 
 const Header = () =>{
 
@@ -57,8 +61,10 @@ const toggleMobileMenu = () => {
     return(
 <StyledWrapper>
     <a><StyledLogo>Digital Agency</StyledLogo></a>
-    <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen}/>
+    <StyledNav>
     <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen}/>
+    <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen}/>
+</StyledNav>
 </StyledWrapper>
 )
     };

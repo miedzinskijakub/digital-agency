@@ -24,6 +24,16 @@ const StyledWrapper = styled.div`
     background-color: white;
     transform: translate(${({isOpen}) => isOpen ? '0' : '100%'});
     transition: transform .25s ease-in-out;
+    ${({ theme }) => theme.mq.tablet}{
+        position: relative;
+        background-color: transparent;
+
+        width: auto;
+        height: auto;
+        transform: none;
+        flex-direction: row;
+
+    }
 
 `;
 
@@ -33,25 +43,37 @@ const MenuLink = styled.p`
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     margin-top: 40px;
+
     opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
     transition: opacity .25s .20s ease-in-out;
 
+    ${({ theme }) => theme.mq.tablet}{
+        margin-top: 0px;
+
+        position: relative;
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 1rem;
+        }
+
     ${({theme}) => theme.mq.desktop}{
-        font-size: 4rem;
-}
-${({theme}) => theme.mq.tablet}{
-    margin-top: 60px;
-    font-size: 4rem;
+        font-size: 1.1rem;
+        color: white !important;    
+    }
+    & > a {
+        color: white;
+        font-weight: 400;
     }
 `;
 
 
 
 const menuItems = [
-    <HashLink to="/#top">Home</HashLink>,
-    <HashLink to="/projects">About</HashLink>,
-    
-    <Link to="/projects">Contacts</Link>,
+    <HashLink to="/projects">projects</HashLink>,
+    <Link to="/services">services</Link>,
+    <Link to="/about">about</Link>,
+    <Link to="/contact">contact</Link>,
+
 ];
 
 

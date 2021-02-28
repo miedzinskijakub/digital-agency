@@ -9,6 +9,9 @@ const StyledWrapper = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     display: grid;
 
+    ${({theme}) => theme.mq.huge}{
+        min-height: 500px;
+    }
 `;
 
 const StyledArticle = styled.article`
@@ -19,6 +22,12 @@ const StyledArticle = styled.article`
     flex-direction: column;
     position: relative;
     justify-content: center;
+    ${({theme}) => theme.mq.desktop}{
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 12vw;
+        padding-right: 40px;
+    }
     ${({ theme }) => theme.mq.huge}{
         width: 100%;
         align-items: flex-start;
@@ -60,6 +69,11 @@ const StyledParagraph = styled.p`
         width: 50vw;
         font-size: calc(1.2rem + 0.25vmax);
     
+    }
+    ${({theme}) => theme.mq.desktop}{
+        width: 100%;
+
+        font-size: calc(1.2rem + 0.25vmax);
     }
 
     ${({ theme }) => theme.mq.huge}{

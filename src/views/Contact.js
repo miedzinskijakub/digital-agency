@@ -40,8 +40,6 @@ display: flex;
    
       grid-column: inherit;
 
-  
-  
   }
 
 `
