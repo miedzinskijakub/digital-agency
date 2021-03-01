@@ -4,6 +4,7 @@ import Button from '../../../../atoms/Button/Button'
 import FirstPug from '../../../../../assets/image/first_pug.jpg'
 import SecondPug from '../../../../../assets/image/second_pug.jpg'
 import ThirdPug from '../../../../../assets/image/third_pug.jpg'
+import Fade from 'react-reveal/Fade';
 
 
 const StyledWrapper = styled.section`
@@ -77,15 +78,19 @@ const StyledImage = styled.img`
     opacity: 0.7;
     transition: all 0.3s ease-out 0s;
     cursor: pointer;
+
+    &:hover{
+        opacity: 1;
+    }
 `
 
 const ThirdWrapper = () => (   
         <StyledWrapper>
             <StyledArticle>
-                <div>
+                <Fade bottom>
                     <StyledHeading>Check our projects</StyledHeading>
-                </div>
-                <Button/>
+                </Fade>
+                <Button>projects</Button>
 
                 </StyledArticle>
 

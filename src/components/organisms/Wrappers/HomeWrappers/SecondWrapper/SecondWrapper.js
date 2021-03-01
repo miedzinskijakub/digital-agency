@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../../../atoms/ButtonV2/Buttonv2'
+import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.section`
     width: 100vw;
@@ -132,9 +133,9 @@ const SecondWrapper = () => (
 
 
             <FirstStyledArticle>
-                <div><StyledHeader>Why choose us?</StyledHeader></div>
-                <div><StyledParagraph>Reprehenderit do nulla culpa duis excepteur.</StyledParagraph></div>
-                <Button></Button>
+                <Fade bottom><StyledHeader>Why choose us?</StyledHeader></Fade>
+                <Fade bottom><StyledParagraph>Reprehenderit do nulla culpa duis excepteur.</StyledParagraph></Fade>
+                <Button>about</Button>
 
             </FirstStyledArticle>
 

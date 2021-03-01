@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {NavLink} from 'react-router-dom';
 const StyledButton = styled.button`
     width: 65px;
     height: 20px;
@@ -32,10 +32,13 @@ const StyledButton = styled.button`
     }
 `
 
-const Button = () =>(
+const Button = ({children}) => (
     <>
-  <StyledButton>
-      hej
+        <StyledButton>
+            <NavLink to={`/${children}`}>
+                {children}
+            </NavLink>
+            
   </StyledButton>
     </>
 )

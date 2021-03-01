@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FirstPug from '../assets/image/first_pug.jpg'
 import SecondPug from '../assets/image/second_pug.jpg'
 import ThirdPug from '../assets/image/third_pug.jpg'
+import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.div`
   margin-top: 70px;
@@ -63,7 +64,9 @@ justify-content: center;
 opacity: 0.7;
 transition: all 0.3s ease-out 0s;
 cursor: pointer;
-
+&:hover{
+  opacity: 1;
+}
 ${({ theme }) => theme.mq.desktop}{
   
   align-self: flex-end;
@@ -82,7 +85,7 @@ const Projects = () =>(
   <>
     <StyledWrapper>
       <StyledHeadingWrapper>
-        <StyledHeading>projects we made</StyledHeading>
+        <Fade bottom><StyledHeading>projects we made</StyledHeading></Fade>
         
       </StyledHeadingWrapper>
 

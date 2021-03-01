@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {ReactComponent as CoffeMan} from '../../../../../assets/image/coffe.svg'
+import Fade from 'react-reveal/Fade';
 
 
 const StyledSecondSection = styled.div`
@@ -161,8 +162,8 @@ const SecondWrapper = () => (
 </StyledContCoffee>
 <StyledBox>
 <StyledSection>
-<div><StyledH1>article de presse</StyledH1></div>
-<div><StyledParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</StyledParagraph></div>
+<Fade bottom><StyledH1>article de presse</StyledH1></Fade>
+<Fade bottom><StyledParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</StyledParagraph></Fade>
 <StyledButton>projects</StyledButton>
 </StyledSection>
 </StyledBox>

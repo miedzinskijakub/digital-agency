@@ -61,7 +61,7 @@ const MenuLink = styled.p`
         color: white !important;    
     }
     & > a {
-        color: white;
+        color: black;
         font-weight: 400;
     }
 `;

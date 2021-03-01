@@ -6,6 +6,7 @@ const StyledHamburger = styled.button`
     border: none;
     background: none;
     z-index: 9999;
+    cursor: pointer;
     ${({ theme }) => theme.mq.huge}{
         padding: 20px;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../../../../atoms/Button/Button'
 import Wall from '../../../../../assets/image/wall-large.jpg'
+import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.section`
     width: 100vw;
@@ -9,7 +10,7 @@ const StyledWrapper = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     display: grid;
 
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
         min-height: 500px;
     }
 `;
@@ -22,7 +23,7 @@ const StyledArticle = styled.article`
     flex-direction: column;
     position: relative;
     justify-content: center;
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         justify-content: center;
         align-items: flex-start;
         padding-left: 12vw;
@@ -70,7 +71,7 @@ const StyledParagraph = styled.p`
         font-size: calc(1.2rem + 0.25vmax);
     
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         width: 100%;
 
         font-size: calc(1.2rem + 0.25vmax);
@@ -98,17 +99,17 @@ const StyledBackground = styled.div`
 `
 
 const FirstWrapper = () => (
-   
-        <StyledWrapper>
-           <StyledArticle>
-               <div><StyledHeader>Take your business to the next level</StyledHeader></div>
-               <div><StyledParagraph>Sint nostrud ipsum ut consectetur magna cillum qui. Commodo cillum in aute magna aliquip in aliquip excepteur.</StyledParagraph></div>
-                <StyledButtonContainer><Button></Button><Button></Button></StyledButtonContainer>
 
-           </StyledArticle>
-           <StyledBackground/>
-        </StyledWrapper>
-   
-   );
+    <StyledWrapper>
+        <StyledArticle>
+            <Fade bottom><StyledHeader>Take your business to the next level</StyledHeader></Fade>
+            <Fade bottom><StyledParagraph>Sint nostrud ipsum ut consectetur magna cillum qui. Commodo cillum in aute magna aliquip in aliquip excepteur.</StyledParagraph></Fade>
+            <StyledButtonContainer><Button >about</Button><Button>contact</Button></StyledButtonContainer>
+
+        </StyledArticle>
+        <StyledBackground />
+    </StyledWrapper>
+
+);
 
 export default FirstWrapper;

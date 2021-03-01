@@ -19,6 +19,17 @@ ${({ theme }) => theme.mq.tablet}{
   
 
 }
+
+${({ absolute }) =>
+absolute &&
+`
+@media (min-height: 750px), (min-width: 1550px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+`}
 `
 
 const StyledLink = styled.a`
@@ -99,14 +110,14 @@ const Footer = () => {
 
 
     const { pathname } = useLocation();
-    if (pathname === '/services') {
+    if (pathname === '/services' || pathname === '/projects') {
 
-
+        console.log(pathname);
 
     }
 
     return (
-        <StyledWrapper className="pizda">
+        <StyledWrapper absolute={pathname.includes('/projects') ? true : false ||pathname.includes('/services') ? true : false }>
             <StyledLink>Digital Agency</StyledLink>
             <SecondStyledArticle>
                 <StyledSection>
