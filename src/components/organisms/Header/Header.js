@@ -16,19 +16,19 @@ const StyledWrapper = styled.header`
     align-items: center;
     background-color: transparent;
     z-index: 9999;  
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         align-items: center;
 
         svg{
             font-size: 30px;
         }
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         svg{
             font-size: 25px;
         }
 }
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
     svg{
         font-size: 40px;
     }
@@ -48,25 +48,25 @@ const StyledNav = styled.nav`
     justify-content: center;
 `
 
-const Header = () =>{
+const Header = () => {
 
-const [isMenuOpen, setMenuState] = useState(false);
-
-
-const toggleMobileMenu = () => {
-    setMenuState(!isMenuOpen);
-}
+    const [isMenuOpen, setMenuState] = useState(false);
 
 
-    return(
-<StyledWrapper>
-    <a><StyledLogo>Digital Agency</StyledLogo></a>
-    <StyledNav>
-    <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen}/>
-    <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen}/>
-</StyledNav>
-</StyledWrapper>
-)
-    };
+    const toggleMobileMenu = () => {
+        setMenuState(!isMenuOpen);
+    }
+
+
+    return (
+        <StyledWrapper>
+            <a href="/"><StyledLogo>Digital Agency</StyledLogo></a>
+            <StyledNav>
+                <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen} />
+                <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+            </StyledNav>
+        </StyledWrapper>
+    )
+};
 
 export default Header;

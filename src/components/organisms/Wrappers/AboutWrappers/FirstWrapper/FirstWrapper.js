@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ReactComponent as ReactLogo} from '../../../../../assets/image/meeting.svg'
-import {ReactComponent as Particle} from '../../../../../assets/image/particle.svg'
+import { ReactComponent as ReactLogo } from '../../../../../assets/image/meeting.svg'
+import { ReactComponent as Particle } from '../../../../../assets/image/particle.svg'
 
 const StyledContainer = styled.div`
 flex-direction: column;
@@ -85,16 +85,16 @@ const StyledParagraph = styled.p`
 
 `
 
-const FirstWrapper = () =>(
+const FirstWrapper = () => (
 
 
-  <StyledContainer>
+    <StyledContainer>
 
-  <Styledh1>Think outside the box</Styledh1>
-  <StyledParticles/>
-  <StyledMeeting/>
-  <StyledParagraph>studio de création</StyledParagraph>
-  </StyledContainer>
+        <Styledh1>Think outside the box</Styledh1>
+        <StyledParticles />
+        <StyledMeeting />
+        <StyledParagraph>studio de création</StyledParagraph>
+    </StyledContainer>
 
 )
 

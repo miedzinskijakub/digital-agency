@@ -1,16 +1,14 @@
 import React from 'react';
 import FirstWrapper from '../components/organisms/Wrappers/AboutWrappers/FirstWrapper/FirstWrapper';
 import SecondWrapper from '../components/organisms/Wrappers/AboutWrappers/SecondWrapper/SecondWrapper';
-import ThirdWrapper from'../components/organisms/Wrappers/AboutWrappers/ThirdWrapper/ThirdWrapper';
+import ThirdWrapper from '../components/organisms/Wrappers/AboutWrappers/ThirdWrapper/ThirdWrapper';
 
 
-const About = () =>(
+const About = () => (
   <>
-<FirstWrapper/>
-<SecondWrapper/>
-<ThirdWrapper/>
-
-
+    <FirstWrapper />
+    <SecondWrapper />
+    <ThirdWrapper />
   </>
 )
 

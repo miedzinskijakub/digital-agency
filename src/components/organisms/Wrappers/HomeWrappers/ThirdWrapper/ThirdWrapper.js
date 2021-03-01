@@ -91,9 +91,9 @@ const ThirdWrapper = () => (
 
 
             <StyledImageContainer>
-                <a><StyledImage src={FirstPug}></StyledImage></a>
-                <a><StyledImage src={SecondPug}></StyledImage></a>
-                <a><StyledImage src={ThirdPug}></StyledImage></a>
+                <a href="/"><StyledImage src={FirstPug}></StyledImage></a>
+                <a href="/"><StyledImage src={SecondPug}></StyledImage></a>
+                <a href="/"><StyledImage src={ThirdPug}></StyledImage></a>
 
             </StyledImageContainer>
          

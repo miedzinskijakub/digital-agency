@@ -95,20 +95,20 @@ const SecondStyledArticle = styled.article`
     }
 
 `
-const Footer = () =>{
+const Footer = () => {
 
-    
-const {pathname} = useLocation();
-if(pathname === '/services'){
-  
 
-  
-}
+    const { pathname } = useLocation();
+    if (pathname === '/services') {
 
-  return(
-    <StyledWrapper className = "pizda">
-        <StyledLink>Digital Agency</StyledLink>
-        <SecondStyledArticle>
+
+
+    }
+
+    return (
+        <StyledWrapper className="pizda">
+            <StyledLink>Digital Agency</StyledLink>
+            <SecondStyledArticle>
                 <StyledSection>
                     <StyledHeading4>Development</StyledHeading4>
                     <StyledUL>
@@ -116,14 +116,14 @@ if(pathname === '/services'){
                         <StyledLI>Web development</StyledLI>
                     </StyledUL>
                 </StyledSection>
-                <StyledSection>  
+                <StyledSection>
                     <StyledHeading4>Business</StyledHeading4>
                     <StyledUL>
                         <StyledLI>Marketing</StyledLI>
                         <StyledLI>SEO</StyledLI>
                     </StyledUL>
                 </StyledSection>
-                <StyledSection>                    
+                <StyledSection>
                     <StyledHeading4>Design</StyledHeading4>
                     <StyledUL>
                         <StyledLI>UX Design</StyledLI>
@@ -132,9 +132,9 @@ if(pathname === '/services'){
                 </StyledSection>
 
             </SecondStyledArticle>
-    </StyledWrapper>
-    
+        </StyledWrapper>
+
     )
-  };
-    
-    export default Footer;
+};
+
+export default Footer;

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import {animateScroll as scroll } from "react-scroll";
-import { Link} from 'react-router-dom';
+//import { animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-  const scrollToBottom = () => {
-    scroll.scrollToBottom(); 
-};
+/*const scrollToBottom = () => {
+    scroll.scrollToBottom();
+};*/
 
 
 
@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
     z-index: 9998;
     flex-direction: column;
     background-color: white;
-    transform: translate(${({isOpen}) => isOpen ? '0' : '100%'});
+    transform: translate(${({ isOpen }) => isOpen ? '0' : '100%'});
     transition: transform .25s ease-in-out;
     ${({ theme }) => theme.mq.tablet}{
         position: relative;
@@ -56,7 +56,7 @@ const MenuLink = styled.p`
         font-size: 1rem;
         }
 
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         font-size: 1.1rem;
         color: white !important;    
     }
@@ -77,16 +77,16 @@ const menuItems = [
 ];
 
 
-const MobileMenu = ({isOpen, toogle}) => (
-    
-   
+const MobileMenu = ({ isOpen, toogle }) => (
+
+
     <StyledWrapper isOpen={isOpen}>
-        {menuItems.map( (item, index) => (
-        <MenuLink key={index} isOpen={isOpen}
-          onClick={toogle}>{item}</MenuLink>
+        {menuItems.map((item, index) => (
+            <MenuLink key={index} isOpen={isOpen}
+                onClick={toogle}>{item}</MenuLink>
         ))}
     </StyledWrapper>
-   
+
 );
 
 export default MobileMenu;
