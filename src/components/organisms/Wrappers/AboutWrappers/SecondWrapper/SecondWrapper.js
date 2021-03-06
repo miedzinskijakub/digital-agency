@@ -4,6 +4,7 @@ import {ReactComponent as CoffeMan} from '../../../../../assets/image/coffe.svg'
 import Fade from 'react-reveal/Fade';
 
 
+
 const StyledSecondSection = styled.div`
 width: 100vw;
 height: calc(100vh - 70px);
